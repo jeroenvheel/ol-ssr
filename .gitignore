@@ -2,3 +2,5 @@ node_modules
 package-lock.json
 out.png
 index.cjs
+.env
+*.yml

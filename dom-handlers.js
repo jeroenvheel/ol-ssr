@@ -1,6 +1,11 @@
 import { performance } from 'perf_hooks';
+import ResizeObserver from 'resize-observer-polyfill';
 
 export function initDOM(window) {
+
+    global.ResizeObserver = ResizeObserver;
+    global.ShadowRoot = Object;
+
     URL.createObjectURL = () => null;
 
     window.document.createElement = ((orig) => {
